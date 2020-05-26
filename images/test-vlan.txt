@@ -1,0 +1,79 @@
+::vlan 1. avantatges
+::quina millora hi trobes dividint la xarxa en vlan ? {
+	~Amb vlan no has de configurar ni ips ni màscara en els equips
+	~Amb vlan no has de configurar màscara en els equips
+	=Millora la seguretat perque la configuració de les vlan no es pot modificar des dels dispositius
+	~No hi ha cap seguretat, amb una ip de la mateixa xarxa es pot accedir a la resta d'ordinadors connectats al switch.
+}
+
+::vlan 2. avantatges
+::si tenim tres vlan en una xarxa (vlan11, vlan22 i vlan33) i s'envia un missatge broadcast des de la vlan22 ... {
+	~el missatge arriba a tots els equips de la xarxa, doncs broadcast vol dir que s'envia a tots els dispositius.
+	=el missatge arriba a tots els equips de la vlan22, doncs fer vlan delimita el domini de broadcast o de difusió.
+	~els missatges broadcast no existeixen en un entorn amb vlan
+	~Los vlan no existen! Todo lo que os cuentan es falso! Cuidado con los bulos en la red!
+}
+
+::vlan 3. modes
+::què dos modes es poden configurar en el port d'un conmutador? {
+	~Ay! Déjame en paz! Tanto vlan y tanto boradcast de ese! Qué pesaos estos profes!!!!
+	~mode on i mode off
+	~access i no access
+	=access i trunk
+}
+
+::vlan 4. mode access
+::quantes vlan podem associar a un port que està en mode access? {
+	=una única vlan
+	~tantes com vulguem.
+	~totes les vlan estan associades a un port en mode access.
+	~cap vlan
+}
+
+::vlan 5. mode trunk
+::quan configurem un port en mode trunk? {
+	~quan és un port que uneix el conmutador a un hub o a un punt d'accés.
+	~quan és un port que uneix el conmutador a un hub, un punt d'accés o un dispositiu final.
+	=quan és un port que uneix dos conmutadors i han de passar per l'enllaç més d'una vlan.
+	~quan necessitem xifrar les dades que passen per aquell port.
+}
+
+::vlan 6. mode trunk
+::quantes vlan podem associar a un port que està en mode trunk? {
+	~yo es que soy más de disneyLAN ... Pero el de París, eh?!
+	=totes les VLAN que necessitem que passin per aquell port.
+	~Una única vlan. la de per defecte.
+	~Una única vlan. 
+}
+
+::vlan 7. creació vlan
+::quins paràmetres podem associar en crear una vlan? {
+	~nom i cognoms de la vlan
+	~un número. L'identificador
+	~res. Ja els genera el sistema. 
+	=un nom i un identificador numèric
+}
+
+::vlan 8. show vlan
+::quina comanda et permet veure de manera breu les vlan creades i els ports que la tenen assignada? {
+	=Switch#show vlan brief
+	~Switch(config)#show vlan brief
+	~Switch#show vlan statistics
+	~Switch(config)#show vlan statistics
+}
+
+::vlan 9. VTP server
+::Quin aventatge té muntar una infraestructura de Servidor VTP i clients? {
+	~Ninguna. Más movida y ya está.
+	=la creació de les VLAN la pots fer únicament des d'un lloc i dsitribuir-les a la resta, des del servidor VTP.
+	~Des del servidor VTP pots fer totes les vlan de la xarxa i fer la configuració dels ports de tots els conmutadors.
+	~Més seguretat ja que les dades van xifrades.
+}
+
+::vlan 10. VTP server
+::Quin d'aquests pasos NO entraria quan muntes una infraestructura de Servidor VTP i clients VTP? {
+	=fer les vlan en els conmutadors que són clients.
+	~crear un domini per agrupar a tots els conmutadors clients.
+	~definir quin conmutador és el servidor.
+	~definir quins conmutadors són els clients.
+}

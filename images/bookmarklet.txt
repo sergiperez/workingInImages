@@ -1,0 +1,23 @@
+$( "a[title='Suprimeix']" ).each(function( index ) 
+{
+var delUrl = $(this).attr('onclick');
+var startIndex = delUrl.indexOf("'");
+alert(startIndex);
+var endIndex = delUrl.indexOf("'",startIndex+1); 
+alert("https://agora.xtec.cat/insjoandaustria/moodle/report/coursequotas/filemanager_action.php?action=delete&fileid="+delUrl.substring(startIndex+1,endIndex));
+}
+);
+
+
+$( "a" ).each(function( index ) 
+{
+    var href = a.attr('href'):
+    if (href.indexOf("editadvanced.php") > -1){
+        var startWord = href.indexOf("id=");
+        var endWord = href.indexOf("&",startWord);
+        console.log('https://agora.xtec.cat/insjoandaustria/moodle/report/coursequotas/filemanager.php?userid='+href.substring(startWord,endWord));
+    }
+}
+);
+
+https://mrcoles.com/bookmarklet/
