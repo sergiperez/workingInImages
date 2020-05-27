@@ -81,7 +81,7 @@ if __name__ == "__main__":
 
 ## Exercici 4 - Posar marca d'aigua
 
-Heu de demanar a l'usuarion està la imatge que voleu que posi com  a marca d'aigua. En aquest cas usarem la marca/logo.png .
+Heu de demanar a l'usuari on està la imatge que voleu que posi com  a marca d'aigua. En aquest cas usarem la marca/logo.png .
 
 I després li heu de dir on vol que la poseu, a quina cantonada:
 - a dalt a l'esquerra
@@ -89,7 +89,7 @@ I després li heu de dir on vol que la poseu, a quina cantonada:
 - a baix a l'esquerra
 - a baix a la dreta
 
-Heu de crear una carpeta dins images que es digui marca d'aigua i allà guardareu les imatges amb la marca d'aigua.
+Heu de crear una carpeta que es digui marcaAigua i allà guardareu les imatges amb la marca d'aigua.
 
 Fixeu-vos aquí com posar una imatge dins una altra. fixeu-vos que al fer el paste indiqueu on la voleu situar:
 
@@ -122,7 +122,7 @@ if __name__ == "__main__":
 
 ## Exercici 5 - Desenvolupar l'opció del menú "Convertir png a jpg"
 
-Heu de convertir totes les imatges png, que hi ha a la carpeta images, a jpg.  Aquestes iamtges convertides s'han de guardar en la carpeta images/jpg.
+Heu de convertir totes les imatges png, que hi ha a la carpeta images, a jpg.  Aquestes imatges convertides s'han de guardar en la carpeta jpg.
 
 ```python3=
 from PIL import Image
