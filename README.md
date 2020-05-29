@@ -2,14 +2,28 @@
 
 ## Exercici 1 - Detectar si són imatges o no
 
+![](https://http.cat/415.jpg)
+
 El primer que heu de fer és netejar el directori imatges. Heu de llistar tots els arxius que hi ha en el directori i mostrar els noms dels arxius que no són imatges.
 
-Per detectar si un fitxer és una imatge ho podeu fer:
+Per detectar si un fitxer és una imatge ho podeu fer de dues maneres:
+
+- Detectar si l'extensió del fitxer, caràcters després del punt estan en el format correcte o no.
+```python3=
+correctFormats = ['rgb', 'gif','tiff','jpeg','jpg','bmp','png']
+file = "hola.txt"
+if file not in correctFormats:
+    #TODO tractar arxiu sinó és iamtge
+```
+- **Però que passa si poso un fitxer i li poso extensió .jpg o .png** doncs que colaria, una millor manera es usant excepcions:
 ```python3=
 from PIL import Image
-img = Image.open('/home/mdriscoll/Pictures/all_python.jpg')
-format =img.format
+try:
+    img = Image.open('/home/mdriscoll/Pictures/all_python.jpg')
+exception:
+    #Aquí salta si no pot crear imatge i aquí s'ha de fer el codi per tracatar el fitxer no iamtge
 ```
+
 
 Els formats correcte són:
 'rgb', 'gif','tiff','jpeg','jpg','bmp' i 'png'.
@@ -28,6 +42,8 @@ Un cop heu netejat el directori imatges li mostreu el següent menu:
 4. Convertir de png a jgp
 
 ## Exercici 2 - Triar imatges per mides
+
+![](https://http.cat/414.jpg)
 
 Heu de demanar a l'usuari per quina dimensió vol filtar:
 - amplada (w)
@@ -56,6 +72,7 @@ with Image.open(filename) as image:
 On a width guarda l'amplada i height l'alçada.
 
 ## Exercici 3 - Crear miniatures
+![](https://memeguy.com/photos/images/mrw-i-click-the-link-and-its-the-same-size-as-the-thumbnail-9232.gif)
 
 Heu de demanar a l'usuari quines mides han de tenir les miniatures, tant en alçada com amplada.
 
@@ -80,6 +97,8 @@ if __name__ == "__main__":
 ```
 
 ## Exercici 4 - Posar marca d'aigua
+
+![](https://i.imgflip.com/37i9vn.jpg)
 
 Heu de demanar a l'usuari on està la imatge que voleu que posi com  a marca d'aigua. En aquest cas usarem la marca/logo.png .
 
@@ -121,6 +140,8 @@ if __name__ == "__main__":
 ```
 
 ## Exercici 5 - Desenvolupar l'opció del menú "Convertir png a jpg"
+
+![](https://img.memecdn.com/PNG-vs-JPEG_o_23487.jpg)
 
 Heu de convertir totes les imatges png, que hi ha a la carpeta images, a jpg.  Aquestes imatges convertides s'han de guardar en la carpeta jpg.
 
